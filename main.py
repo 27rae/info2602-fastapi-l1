@@ -31,6 +31,7 @@ async def get_student(id):
     if student['id'] == id: # Only return the student if the ID matches
       return student
 
+##exercise 1
 @app.get("/stats")
 async def get_stats():
     stats={}
@@ -45,7 +46,8 @@ async def get_stats():
                 stats[programme]=stats.get(programme,0)+1
 
     return stats
-    
+
+##exercise 2    
 @app.get("/add/{a}/{b}")
 async def add(a: float, b:float):
     return {"result":a+b}
